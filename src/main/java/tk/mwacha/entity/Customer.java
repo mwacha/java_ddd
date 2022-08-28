@@ -1,29 +1,33 @@
 package tk.mwacha.entity;
 
-import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+import tk.mwacha.valueobject.Address;
 
 import java.util.UUID;
 
+@Getter
 public class Customer {
 
     private UUID id;
     private String name;
-    private String address;
+    @Setter
+    private Address address;
     private boolean active;
 
-    public Customer(UUID id, String name) {
+    public Customer(final UUID id, final String name) {
         this.id = id;
         this.name = name;
         this.validate();
     }
 
-    public void changeName(String name) {
+    public void changeName(final String name) {
         this.name = name;
         this.validate();
     }
 
     public void activate() {
-        if (this.address == null || this.address.isEmpty()) {
+        if (this.address == null) {
             throw new RuntimeException("Address is required to activate a customer");
         }
         this.active = true;
@@ -34,12 +38,13 @@ public class Customer {
     }
 
     private void validate() {
-        if (this.name == null || this.name.isEmpty()) {
-            throw new RuntimeException("Name is required");
-        }
 
         if (this.id == null) {
             throw new RuntimeException("Id is required");
+        }
+
+        if (this.name == null || this.name.isEmpty()) {
+            throw new RuntimeException("Name is required");
         }
     }
 }
