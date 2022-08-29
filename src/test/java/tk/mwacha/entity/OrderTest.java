@@ -41,24 +41,44 @@ class OrderTest {
         final var cutomerId = UUID.fromString("2302dee9-4037-48c0-8ed6-57c98ffe3997");
 
         final var item1 = new OrderItem(
-                UUID.fromString("77de321a-d314-499e-ad45-5d647112cecc"), "Item1", BigDecimal.valueOf(100));
+                UUID.fromString("77de321a-d314-499e-ad45-5d647112cecc"), UUID.randomUUID(),
+                "Item1", BigDecimal.valueOf(100), 2);
 
         final var item2 = new OrderItem(
-                UUID.fromString("fae9043e-ef3c-40ab-b8ca-af51e79eaffd"), "Item2", BigDecimal.valueOf(200));
+                UUID.fromString("fae9043e-ef3c-40ab-b8ca-af51e79eaffd"), UUID.randomUUID(),
+                "Item2", BigDecimal.valueOf(200), 2);
 
 
         final var order = new Order(UUID.fromString("9222f3f4-e602-41bc-bfb5-7b2431c72d48"),
                 cutomerId, List.of(item1));
 
         final var total = order.total();
-        assertEquals(total, BigDecimal.valueOf(100));
+        assertEquals(total, BigDecimal.valueOf(200));
 
         final var order2 = new Order(UUID.fromString("9222f3f4-e602-41bc-bfb5-7b2431c72d48"),
                 cutomerId, List.of(item1, item2));
 
         final var total2 = order2.total();
 
-        assertEquals(total2, BigDecimal.valueOf(300));
+        assertEquals(total2, BigDecimal.valueOf(600));
+
+    }
+
+
+    @Test
+    void should_throw_error_if_the_item_qtd_is_less_or_equal_zero() {
+
+        final var cutomerId = UUID.fromString("2302dee9-4037-48c0-8ed6-57c98ffe3997");
+
+        final var item1 = new OrderItem(
+                UUID.fromString("77de321a-d314-499e-ad45-5d647112cecc"), UUID.randomUUID(),
+                "Item1", BigDecimal.valueOf(100), 0);
+
+        assertThrows(RuntimeException.class, () -> {
+
+            new Order(UUID.fromString("9222f3f4-e602-41bc-bfb5-7b2431c72d48"),
+                    cutomerId, List.of(item1));
+        }).getMessage().equals("Quantity must be greater than zero");
 
     }
 }

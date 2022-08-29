@@ -21,7 +21,7 @@ public class Order {
     }
 
     public BigDecimal total() {
-       return this.items.stream().map(i -> i.getPrice()).reduce(BigDecimal::add).orElse(BigDecimal.ZERO);
+       return this.items.stream().map(i -> i.price()).reduce(BigDecimal::add).orElse(BigDecimal.ZERO);
     }
 
 
@@ -39,6 +39,9 @@ public class Order {
             throw new RuntimeException("Item qtd must be greater than zero");
         }
 
+        this.items.stream().filter(i -> i.getQuantity() <= 0).findAny().ifPresent(e -> {
+            throw new RuntimeException("Quantity must be greater than zero");
+         });
     }
 
 }
