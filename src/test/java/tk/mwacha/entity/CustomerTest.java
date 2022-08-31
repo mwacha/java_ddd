@@ -72,4 +72,20 @@ class CustomerTest {
 
         assertFalse(customer.isActive());
     }
+
+    @Test
+    void should_add_reward_points() {
+        final var customer = new Customer(UUID.randomUUID(), "Marcelo");
+
+        assertEquals(customer.getRewardPoints(), 0);
+
+        customer.addRewardPoints(10);
+
+        assertEquals(customer.getRewardPoints(), 10);
+
+        customer.addRewardPoints(10);
+
+        assertEquals(customer.getRewardPoints(), 20);
+    }
+
 }

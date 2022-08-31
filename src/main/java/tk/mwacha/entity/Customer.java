@@ -15,6 +15,8 @@ public class Customer {
     private Address address;
     private boolean active;
 
+    private int rewardPoints;
+
     public Customer(final UUID id, final String name) {
         this.id = id;
         this.name = name;
@@ -35,6 +37,11 @@ public class Customer {
 
     public void deactivate() {
         this.active = false;
+    }
+
+
+    public void addRewardPoints(final int points) {
+        this.rewardPoints += points;
     }
 
     private void validate() {
