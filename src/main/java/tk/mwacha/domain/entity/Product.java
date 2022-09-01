@@ -1,4 +1,4 @@
-package tk.mwacha.entity;
+package tk.mwacha.domain.entity;
 
 import lombok.Getter;
 

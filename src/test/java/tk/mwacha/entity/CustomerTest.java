@@ -1,7 +1,8 @@
 package tk.mwacha.entity;
 
 import org.junit.jupiter.api.Test;
-import tk.mwacha.valueobject.Address;
+import tk.mwacha.domain.entity.Customer;
+import tk.mwacha.domain.valueobject.Address;
 
 import java.util.UUID;
 

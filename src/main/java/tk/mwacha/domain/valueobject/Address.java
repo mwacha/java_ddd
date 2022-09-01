@@ -1,4 +1,4 @@
-package tk.mwacha.valueobject;
+package tk.mwacha.domain.valueobject;
 
 public class Address {
 

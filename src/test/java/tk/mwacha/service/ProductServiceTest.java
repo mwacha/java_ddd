@@ -2,7 +2,8 @@ package tk.mwacha.service;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import tk.mwacha.entity.Product;
+import tk.mwacha.domain.entity.Product;
+import tk.mwacha.domain.service.ProductService;
 
 import java.math.BigDecimal;
 import java.util.List;

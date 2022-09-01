@@ -1,7 +1,8 @@
 package tk.mwacha.entity;
 
 import org.junit.jupiter.api.Test;
-import tk.mwacha.entity.aggegate.OrderItem;
+import tk.mwacha.domain.entity.Order;
+import tk.mwacha.domain.entity.aggegate.OrderItem;
 
 import java.math.BigDecimal;
 import java.util.List;

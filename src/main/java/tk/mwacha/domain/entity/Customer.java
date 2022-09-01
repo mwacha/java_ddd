@@ -1,8 +1,8 @@
-package tk.mwacha.entity;
+package tk.mwacha.domain.entity;
 
 import lombok.Getter;
 import lombok.Setter;
-import tk.mwacha.valueobject.Address;
+import tk.mwacha.domain.valueobject.Address;
 
 import java.util.UUID;
 

@@ -1,4 +1,4 @@
-package tk.mwacha.entity.aggegate;
+package tk.mwacha.domain.entity.aggegate;
 
 
 import lombok.Getter;

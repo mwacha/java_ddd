@@ -1,6 +1,6 @@
-package tk.mwacha.entity;
+package tk.mwacha.domain.entity;
 
-import tk.mwacha.entity.aggegate.OrderItem;
+import tk.mwacha.domain.entity.aggegate.OrderItem;
 
 import java.math.BigDecimal;
 import java.util.List;

@@ -1,6 +1,7 @@
 package tk.mwacha.entity;
 
 import org.junit.jupiter.api.Test;
+import tk.mwacha.domain.entity.Product;
 
 import java.math.BigDecimal;
 import java.util.UUID;

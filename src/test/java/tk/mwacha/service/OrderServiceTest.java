@@ -1,9 +1,10 @@
 package tk.mwacha.service;
 
 import org.junit.jupiter.api.Test;
-import tk.mwacha.entity.Customer;
-import tk.mwacha.entity.Order;
-import tk.mwacha.entity.aggegate.OrderItem;
+import tk.mwacha.domain.entity.Customer;
+import tk.mwacha.domain.entity.Order;
+import tk.mwacha.domain.entity.aggegate.OrderItem;
+import tk.mwacha.domain.service.OrderService;
 
 import java.math.BigDecimal;
 import java.util.List;

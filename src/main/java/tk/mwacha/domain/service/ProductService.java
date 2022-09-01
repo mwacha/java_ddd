@@ -1,6 +1,6 @@
-package tk.mwacha.service;
+package tk.mwacha.domain.service;
 
-import tk.mwacha.entity.Product;
+import tk.mwacha.domain.entity.Product;
 
 import java.math.BigDecimal;
 import java.util.List;
