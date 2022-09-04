@@ -1,4 +1,4 @@
-package tk.mwacha.entity;
+package tk.mwacha.domain.entity;
 
 import org.junit.jupiter.api.Test;
 import tk.mwacha.domain.entity.Customer;
