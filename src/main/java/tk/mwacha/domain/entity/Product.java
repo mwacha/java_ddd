@@ -1,11 +1,15 @@
 package tk.mwacha.domain.entity;
 
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.UUID;
 
 @Getter
+@Builder
+@EqualsAndHashCode
 public class Product {
 
     private UUID id;
