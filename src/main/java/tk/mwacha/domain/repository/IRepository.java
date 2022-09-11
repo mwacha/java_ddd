@@ -5,8 +5,11 @@ import java.util.UUID;
 
 public interface IRepository<T> {
 
-    void create (T entity);
-    void update (T entity);
-    T find (UUID id);
-    List<T> findAll();
+  void create(T entity);
+
+  void update(T entity);
+
+  T find(UUID id);
+
+  List<T> findAll();
 }

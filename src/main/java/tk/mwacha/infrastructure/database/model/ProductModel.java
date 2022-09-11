@@ -1,17 +1,17 @@
 package tk.mwacha.infrastructure.database.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import tk.mwacha.domain.entity.Product;
-
+import java.math.BigDecimal;
+import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.math.BigDecimal;
-import java.util.UUID;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import tk.mwacha.domain.entity.Product;
 
 @Entity
 @Table(name = "products")
@@ -19,23 +19,26 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
+@Getter
 public class ProductModel {
 
-    @Id
-    private UUID id;
+  @Id private UUID id;
 
-    @Column(nullable = false)
-    private String name;
+  @Column(nullable = false)
+  private String name;
 
-    @Column(nullable = false)
-    private BigDecimal price;
+  @Column(nullable = false)
+  private BigDecimal price;
 
-    public static Product to(ProductModel model) {
-        return Product.builder().id(model.id).name(model.name).price(model.price).build();
-    }
+  public static Product to(ProductModel model) {
+    return Product.builder().id(model.id).name(model.name).price(model.price).build();
+  }
 
-    public static ProductModel of(Product product) {
-        return ProductModel.builder().id(product.getId()).name(product.getName()).price(product.getPrice()).build();
-    }
-
+  public static ProductModel of(Product product) {
+    return ProductModel.builder()
+        .id(product.getId())
+        .name(product.getName())
+        .price(product.getPrice())
+        .build();
+  }
 }
