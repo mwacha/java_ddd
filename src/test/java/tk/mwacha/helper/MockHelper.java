@@ -3,11 +3,11 @@ package tk.mwacha.helper;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
-import tk.mwacha.domain.entity.Customer;
-import tk.mwacha.domain.entity.Order;
-import tk.mwacha.domain.entity.Product;
-import tk.mwacha.domain.entity.aggegate.OrderItem;
-import tk.mwacha.domain.valueobject.Address;
+import tk.mwacha.domain.customer.entity.Customer;
+import tk.mwacha.domain.checkout.entity.Order;
+import tk.mwacha.domain.product.entity.Product;
+import tk.mwacha.domain.checkout.entity.OrderItem;
+import tk.mwacha.domain.customer.valueobject.Address;
 
 public final class MockHelper {
   public static Customer buildCustomer() {

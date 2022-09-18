@@ -5,9 +5,10 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import tk.mwacha.domain.entity.Product;
-import tk.mwacha.domain.event.product.ProductCreatedEvent;
-import tk.mwacha.domain.event.product.handler.SendEmailWhenProductIsCreatedHandler;
+import tk.mwacha.domain.product.entity.Product;
+import tk.mwacha.domain.product.event.ProductCreatedEvent;
+import tk.mwacha.domain.product.event.handler.SendEmailWhenProductIsCreatedHandler;
+import tk.mwacha.domain.shared.event.EventDispatcher;
 
 import java.math.BigDecimal;
 import java.util.UUID;

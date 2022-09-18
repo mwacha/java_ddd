@@ -7,7 +7,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.UUID;
 import org.junit.jupiter.api.Test;
-import tk.mwacha.domain.valueobject.Address;
+import tk.mwacha.domain.customer.entity.Customer;
+import tk.mwacha.domain.customer.valueobject.Address;
 
 class CustomerTest {
 

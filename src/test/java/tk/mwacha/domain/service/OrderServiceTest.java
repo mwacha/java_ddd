@@ -6,9 +6,10 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
 import org.junit.jupiter.api.Test;
-import tk.mwacha.domain.entity.Customer;
-import tk.mwacha.domain.entity.Order;
-import tk.mwacha.domain.entity.aggegate.OrderItem;
+import tk.mwacha.domain.checkout.service.OrderService;
+import tk.mwacha.domain.customer.entity.Customer;
+import tk.mwacha.domain.checkout.entity.Order;
+import tk.mwacha.domain.checkout.entity.OrderItem;
 
 class OrderServiceTest {
 

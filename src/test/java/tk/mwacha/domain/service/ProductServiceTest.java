@@ -7,7 +7,8 @@ import java.util.List;
 import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import tk.mwacha.domain.entity.Product;
+import tk.mwacha.domain.product.entity.Product;
+import tk.mwacha.domain.product.service.ProductService;
 
 class ProductServiceTest {
 
